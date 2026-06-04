@@ -43,7 +43,7 @@ palabrasDiscriminadas = [
 # ============================================================
 
 print("Cargando dataset...")
-dataset = load_dataset("MLCommons/ml_spoken_words", "es_wav", trust_remote_code=True)
+dataset = load_dataset("MLCommons/ml_spoken_words", "es_wav")
 train = dataset["train"]
 print("Dataset cargado.")
 print(train)
@@ -323,3 +323,22 @@ pred_texto = encoder.inverse_transform([pred_num])[0]
 print("Ruta de prueba:", ruta_prueba)
 print("Palabra real:", PalabrasSeleccionadas[0])
 print("Palabra predicha:", pred_texto)
+
+
+# ============================================================
+# PARTE 10: GUARDAR MODELO Y ENCODER PARA LA APLICACIÓN
+# ============================================================
+
+import pickle
+import os
+
+os.makedirs("models", exist_ok=True)
+
+# Guardar el modelo Keras
+model.save("models/modelo_cnn.h5")
+print("Modelo guardado en models/modelo_cnn.h5")
+
+# Guardar el LabelEncoder
+with open("models/label_encoder.pkl", "wb") as f:
+    pickle.dump(encoder, f)
+print("LabelEncoder guardado en models/label_encoder.pkl")
