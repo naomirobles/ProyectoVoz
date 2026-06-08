@@ -1,6 +1,6 @@
 Clases de palabras reconocidas:
 actualmente
-además
+ademï¿½s
 cinco
 ciudad
 cuando
@@ -14,7 +14,7 @@ entonces
 entre
 estas
 estos
-están
+estï¿½n
 forma
 fueron
 hasta
