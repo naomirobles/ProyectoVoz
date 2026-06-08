@@ -1,1 +1,7 @@
 /venv
+*.docx
+*.h5
+*.hdf5
+*.ckpt
+*.log
+*.pyc

@@ -1,0 +1,13 @@
+{
+  "total_palabras": 24878,
+  "total_muestras": 944513,
+  "palabras_con_suficientes_muestras": 79,
+  "umbral_muestras_suficientes": 1000,
+  "duracion_promedio_seg": 1.0,
+  "duracion_std_seg": 0.0009,
+  "duracion_min_seg": 0.972,
+  "duracion_max_seg": 1.0,
+  "porcentaje_clases_balanceadas": 18.36,
+  "nota_balance": "% de clases dentro del ±20% de la mediana de muestras",
+  "muestras_analizadas_duracion": 1000
+}

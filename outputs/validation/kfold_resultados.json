@@ -1,0 +1,60 @@
+{
+  "accuracy_mean": 0.8143,
+  "accuracy_std": 0.0144,
+  "accuracy_ci_95_nivel_0.95": [
+    0.7943,
+    0.8342
+  ],
+  "precision_macro_mean": 0.7583,
+  "recall_macro_mean": 0.8143,
+  "f1_macro_mean": 0.7805,
+  "f1_macro_std": 0.0137,
+  "interpretacion_ci": "Con probabilidad del 95%, la accuracy real del modelo en datos no vistos se encuentra entre 0.7943 y 0.8342.",
+  "folds": [
+    {
+      "fold": 1,
+      "accuracy": 0.821,
+      "precision_macro": 0.7638,
+      "recall_macro": 0.821,
+      "f1_macro": 0.7874,
+      "n_train": 28000,
+      "n_val": 7000
+    },
+    {
+      "fold": 2,
+      "accuracy": 0.7871,
+      "precision_macro": 0.7342,
+      "recall_macro": 0.7871,
+      "f1_macro": 0.7546,
+      "n_train": 28000,
+      "n_val": 7000
+    },
+    {
+      "fold": 3,
+      "accuracy": 0.8273,
+      "precision_macro": 0.7696,
+      "recall_macro": 0.8273,
+      "f1_macro": 0.7928,
+      "n_train": 28000,
+      "n_val": 7000
+    },
+    {
+      "fold": 4,
+      "accuracy": 0.8231,
+      "precision_macro": 0.7642,
+      "recall_macro": 0.8231,
+      "f1_macro": 0.7889,
+      "n_train": 28000,
+      "n_val": 7000
+    },
+    {
+      "fold": 5,
+      "accuracy": 0.8127,
+      "precision_macro": 0.7599,
+      "recall_macro": 0.8127,
+      "f1_macro": 0.7787,
+      "n_train": 28000,
+      "n_val": 7000
+    }
+  ]
+}

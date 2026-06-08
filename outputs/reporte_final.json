@@ -1,0 +1,205 @@
+{
+  "timestamp": "2026-06-07T18:17:55.832318",
+  "entorno": {
+    "python": "3.11.15",
+    "sistema": "Windows 10",
+    "fecha": "2026-06-07 22:02",
+    "tensorflow": "2.21.0",
+    "numpy": "2.4.6",
+    "sklearn": "1.9.0",
+    "librosa": "0.11.0",
+    "keras_tuner": "1.4.8"
+  },
+  "config": {
+    "seed": 42,
+    "max_palabras": 500,
+    "muestras_por_palabra": 1000,
+    "min_longitud_palabra": 5,
+    "umbral_similitud_fonetica": 0.92,
+    "sr_objetivo": 16000,
+    "duracion_seg": 1.0,
+    "n_mels": 64,
+    "time_steps": 64,
+    "n_fft": 1024,
+    "hop_length": 256,
+    "batch_size": 32
+  },
+  "eda": {
+    "total_palabras": 24878,
+    "total_muestras": 944513,
+    "palabras_con_suficientes_muestras": 79,
+    "duracion_promedio_seg": 0.999972,
+    "duracion_std_seg": 0.000884994915239631,
+    "duracion_min_seg": 0.972,
+    "duracion_max_seg": 1.0,
+    "porcentaje_clases_balanceadas": 18.361604630597313
+  },
+  "seleccion_palabras": {
+    "total_seleccionadas": 35,
+    "excluidas_por_filtro": {
+      "frecuencia_insuficiente": 24799,
+      "longitud_insuficiente": 43,
+      "similitud_fonetica_alta": 1,
+      "bajo_rendimiento_preliminar": 0
+    },
+    "criterios": {
+      "muestras_minimas": 1000,
+      "longitud_minima_chars": 5,
+      "umbral_similitud_fonetica_jaro_winkler": 0.92
+    }
+  },
+  "tuner": {
+    "num_conv_layers": 3,
+    "dropout": 0.4,
+    "dense_units": 512,
+    "learning_rate": 0.00044412650444693207,
+    "batch_normalization": false,
+    "l2_reg": 0.003,
+    "optimizer": "rmsprop",
+    "filters_0": 32,
+    "kernel_0": 3,
+    "filters_1": 128,
+    "kernel_1": 5,
+    "filters_2": 16,
+    "kernel_2": 3,
+    "tuner/epochs": 20,
+    "tuner/initial_epoch": 7,
+    "tuner/bracket": 2,
+    "tuner/round": 2,
+    "tuner/trial_id": "0013",
+    "filters_3": 32,
+    "kernel_3": 5,
+    "batch_size_optimo": 16
+  },
+  "tuner_trials": 20,
+  "entrenamiento": {
+    "accuracy_test": 0.9268571138381958,
+    "loss_test": 0.39796411991119385,
+    "epoch_optima": 53,
+    "total_epochs": 63,
+    "motivo_parada": "EarlyStopping: sin mejora en val_accuracy durante 10 épocas consecutivas",
+    "punto_overfitting": 17,
+    "ganancia_marginal_ultima_epoca": -0.0017856955528259277
+  },
+  "interpretabilidad": {
+    "accuracy_global": 0.9268571428571428,
+    "top_5_mejores": [
+      [
+        "actualmente",
+        0.9975
+      ],
+      [
+        "embargo",
+        0.9801
+      ],
+      [
+        "además",
+        0.9778
+      ],
+      [
+        "universidad",
+        0.9773
+      ],
+      [
+        "encuentra",
+        0.965
+      ]
+    ],
+    "top_5_peores": [
+      [
+        "estas",
+        0.77
+      ],
+      [
+        "estos",
+        0.8253
+      ],
+      [
+        "otros",
+        0.8424
+      ],
+      [
+        "están",
+        0.8593
+      ],
+      [
+        "desde",
+        0.8847
+      ]
+    ],
+    "top_10_confusiones": [
+      [
+        "estos",
+        "estas",
+        24
+      ],
+      [
+        "estas",
+        "estos",
+        18
+      ],
+      [
+        "estas",
+        "están",
+        17
+      ],
+      [
+        "están",
+        "estas",
+        15
+      ],
+      [
+        "cuatro",
+        "otros",
+        8
+      ],
+      [
+        "nombre",
+        "donde",
+        8
+      ],
+      [
+        "entre",
+        "desde",
+        7
+      ],
+      [
+        "tiempo",
+        "cinco",
+        7
+      ],
+      [
+        "otros",
+        "desde",
+        6
+      ],
+      [
+        "otros",
+        "estos",
+        6
+      ]
+    ]
+  },
+  "kfold": {
+    "n_folds": 5,
+    "accuracy_mean": 0.8143,
+    "accuracy_std": 0.0144,
+    "accuracy_ci_95_nivel_0.95": [
+      0.7943,
+      0.8342
+    ],
+    "precision_macro_mean": 0.7583,
+    "recall_macro_mean": 0.8143,
+    "f1_macro_mean": 0.7805,
+    "f1_macro_std": 0.0137
+  },
+  "justificaciones": {
+    "por_que_estas_palabras": "Se seleccionaron 35 palabras aplicando tres filtros cuantitativos, sin ninguna lista manual: (1) Frecuencia ≥ 1000 muestras: garantiza suficiencia estadística para estimar accuracy por clase con margen de error < 5%; (2) Longitud ≥ 5 caracteres: palabras cortas en español son fonéticamente ambiguas (monosílabos con señal acústica escasa); (3) Similitud Jaro-Winkler < 0.92 respecto a cualquier otra ya seleccionada: evita pares confundibles que degradarían accuracy global. Todos los criterios y valores observados están en outputs/eda/seleccion_palabras.csv.",
+    "por_que_se_descartaron_otras": "Palabras descartadas por filtro: frecuencia insuficiente=24799, longitud insuficiente=43, similitud fonética alta con otra seleccionada=1, bajo F1 en entrenamiento preliminar=0. Cada fila rechazada en outputs/eda/seleccion_palabras.csv incluye la métrica observada, el umbral y (si aplica) la palabra con la que conflicta. No existe ninguna lista de exclusión codificada a mano.",
+    "por_que_esta_arquitectura": "La arquitectura fue seleccionada automáticamente mediante Keras Tuner (estrategia Hyperband) explorando el espacio: capas conv (1-4), filtros (16/32/64/128), kernels (3×3 o 5×5), neuronas densas (64/128/256/512), dropout (0.10-0.60), batch normalization (sí/no), L2 regularization (0-0.01), optimizador (adam/rmsprop), learning rate (1e-4 – 1e-2 log). La configuración ganadora está en outputs/tuner/mejores_hiperparametros.json; el ranking de todos los trials en outputs/tuner/resumen_trials.csv.",
+    "por_que_estos_hiperparametros": "Hiperparámetros elegidos por evidencia experimental: {'num_conv_layers': 3, 'dropout': 0.4, 'dense_units': 512, 'learning_rate': 0.00044412650444693207, 'batch_normalization': False, 'l2_reg': 0.003, 'optimizer': 'rmsprop', 'filters_0': 32, 'kernel_0': 3, 'filters_1': 128, 'kernel_1': 5, 'filters_2': 16, 'kernel_2': 3, 'tuner/epochs': 20, 'tuner/initial_epoch': 7, 'tuner/bracket': 2, 'tuner/round': 2, 'tuner/trial_id': '0013', 'filters_3': 32, 'kernel_3': 5, 'batch_size_optimo': 16}. batch_size fue comparado en grilla previa 32 (ver outputs/tuner/). Cada candidato fue evaluado en condiciones controladas (mismo seed=42, mismo split, misma cantidad de datos de tuning).",
+    "por_que_duracion_1_segundo": "El EDA midió una duración promedio de 0.999972s ± 0.000884994915239631s en una muestra aleatoria de audios del dataset. Una ventana de 1 segundo cubre la distribución modal de palabras aisladas en español. Audios más cortos se rellenan con ceros; los más largos se recortan al principio. Ver outputs/eda/histograma_duraciones.png.",
+    "por_que_ese_numero_de_epocas": "El modelo entrenó 63 épocas y se detuvo automáticamente. Motivo: EarlyStopping: sin mejora en val_accuracy durante 10 épocas consecutivas. La época con mejor val_accuracy fue la 53. Sobreajuste detectado ~época 17: val_loss comenzó a aumentar consistentemente; EarlyStopping restauró los pesos óptimos. Las curvas completas están en outputs/training/curvas_entrenamiento.png y el análisis detallado en outputs/training/analisis_epocas.json.",
+    "evidencia_que_respalda_decisiones": "Accuracy test final: 0.9268571138381958. Accuracy K-Fold (5-fold media): 0.8143, IC 95%: [0.7943, 0.8342]. F1 macro K-Fold: 0.7805 ± 0.0137. Rendimiento por clase en outputs/interpretability/rendimiento_por_clase.csv. Pares más confundidos en outputs/interpretability/pares_confundidos.csv. Toda la ejecución es reproducible con seed=42 (Python/NumPy/TensorFlow seeds fijadas al inicio)."
+  }
+}

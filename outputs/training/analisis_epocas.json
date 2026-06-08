@@ -1,0 +1,14 @@
+{
+  "epoch_optima": 53,
+  "total_epochs_ejecutadas": 63,
+  "max_epochs_configurado": 100,
+  "motivo_parada": "EarlyStopping: sin mejora en val_accuracy durante 10 épocas consecutivas",
+  "punto_overfitting_detectado": 17,
+  "val_accuracy_en_epoch_optima": 0.9275,
+  "val_accuracy_final": 0.9243,
+  "ganancia_marginal_ultima_epoca": -0.0018,
+  "ganancia_media_por_epoca": 0.0018,
+  "accuracy_test": 0.9269,
+  "loss_test": 0.398,
+  "interpretacion": "El modelo alcanzó su mejor val_accuracy en la época 53 de 63 ejecutadas. Se detectó sobreajuste aproximadamente en la época 17 (val_loss comenzó a aumentar). EarlyStopping restauró los pesos de la época 53. El entrenamiento se detuvo 37 épocas antes del máximo porque EarlyStopping no observó mejora."
+}

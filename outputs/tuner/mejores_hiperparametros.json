@@ -1,0 +1,22 @@
+{
+  "num_conv_layers": 3,
+  "dropout": 0.4,
+  "dense_units": 512,
+  "learning_rate": 0.00044412650444693207,
+  "batch_normalization": false,
+  "l2_reg": 0.003,
+  "optimizer": "rmsprop",
+  "filters_0": 32,
+  "kernel_0": 3,
+  "filters_1": 128,
+  "kernel_1": 5,
+  "filters_2": 16,
+  "kernel_2": 3,
+  "tuner/epochs": 20,
+  "tuner/initial_epoch": 7,
+  "tuner/bracket": 2,
+  "tuner/round": 2,
+  "tuner/trial_id": "0013",
+  "filters_3": 32,
+  "kernel_3": 5
+}

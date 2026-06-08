@@ -1,0 +1,233 @@
+{
+  "accuracy_global": 0.9269,
+  "f1_macro": 0.9271,
+  "n_clases": 35,
+  "n_clases_f1_excelente_gt_0.8": 34,
+  "n_clases_f1_deficiente_lt_0.4": 0,
+  "top_mejores_f1": [
+    [
+      "actualmente",
+      0.9975
+    ],
+    [
+      "embargo",
+      0.9801
+    ],
+    [
+      "además",
+      0.9778
+    ],
+    [
+      "universidad",
+      0.9773
+    ],
+    [
+      "encuentra",
+      0.965
+    ],
+    [
+      "entonces",
+      0.96
+    ],
+    [
+      "primera",
+      0.9596
+    ],
+    [
+      "cinco",
+      0.9554
+    ],
+    [
+      "forma",
+      0.9533
+    ],
+    [
+      "durante",
+      0.9526
+    ],
+    [
+      "siete",
+      0.9502
+    ],
+    [
+      "mismo",
+      0.95
+    ],
+    [
+      "parte",
+      0.9476
+    ],
+    [
+      "ciudad",
+      0.9474
+    ],
+    [
+      "luego",
+      0.945
+    ]
+  ],
+  "top_peores_f1": [
+    [
+      "estas",
+      0.77
+    ],
+    [
+      "estos",
+      0.8253
+    ],
+    [
+      "otros",
+      0.8424
+    ],
+    [
+      "están",
+      0.8593
+    ],
+    [
+      "desde",
+      0.8847
+    ],
+    [
+      "donde",
+      0.8931
+    ],
+    [
+      "varios",
+      0.8969
+    ],
+    [
+      "cuatro",
+      0.9091
+    ],
+    [
+      "puede",
+      0.9127
+    ],
+    [
+      "todos",
+      0.9158
+    ],
+    [
+      "hasta",
+      0.9173
+    ],
+    [
+      "fueron",
+      0.9219
+    ],
+    [
+      "mayor",
+      0.9227
+    ],
+    [
+      "entre",
+      0.932
+    ],
+    [
+      "cuando",
+      0.932
+    ]
+  ],
+  "top_20_pares_confundidos": [
+    {
+      "real": "estos",
+      "predicha": "estas",
+      "errores": 24
+    },
+    {
+      "real": "estas",
+      "predicha": "estos",
+      "errores": 18
+    },
+    {
+      "real": "estas",
+      "predicha": "están",
+      "errores": 17
+    },
+    {
+      "real": "están",
+      "predicha": "estas",
+      "errores": 15
+    },
+    {
+      "real": "cuatro",
+      "predicha": "otros",
+      "errores": 8
+    },
+    {
+      "real": "nombre",
+      "predicha": "donde",
+      "errores": 8
+    },
+    {
+      "real": "entre",
+      "predicha": "desde",
+      "errores": 7
+    },
+    {
+      "real": "tiempo",
+      "predicha": "cinco",
+      "errores": 7
+    },
+    {
+      "real": "otros",
+      "predicha": "desde",
+      "errores": 6
+    },
+    {
+      "real": "otros",
+      "predicha": "estos",
+      "errores": 6
+    },
+    {
+      "real": "fueron",
+      "predicha": "forma",
+      "errores": 5
+    },
+    {
+      "real": "hasta",
+      "predicha": "están",
+      "errores": 5
+    },
+    {
+      "real": "mayor",
+      "predicha": "varios",
+      "errores": 5
+    },
+    {
+      "real": "otros",
+      "predicha": "todos",
+      "errores": 5
+    },
+    {
+      "real": "cuando",
+      "predicha": "donde",
+      "errores": 4
+    },
+    {
+      "real": "cuatro",
+      "predicha": "cuando",
+      "errores": 4
+    },
+    {
+      "real": "cuatro",
+      "predicha": "parte",
+      "errores": 4
+    },
+    {
+      "real": "desde",
+      "predicha": "donde",
+      "errores": 4
+    },
+    {
+      "real": "forma",
+      "predicha": "además",
+      "errores": 4
+    },
+    {
+      "real": "luego",
+      "predicha": "todos",
+      "errores": 4
+    }
+  ]
+}
